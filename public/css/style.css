@@ -3,6 +3,8 @@
 * 01.GENERAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+
+
 @font-face {
    font-family: SFUFuturaBold;
    src: url(../fonts/SFUFuturaBold.TTF) format('truetype');
@@ -19,14 +21,6 @@
 @font-face {
    font-family: SFUFuturaRegular;
    src: url(../fonts/SFUFuturaRegular.TTF) format('truetype');
-}
-@font-face {
-   font-family: AvenirNextLTPro-Bold;
-   src: url(../fonts/AvenirNextLTPro-Bold.ttf) format('truetype');
-}
-@font-face {
-   font-family: AvenirNextLTPro-Regular;
-   src: url(../fonts/AvenirNextLTPro-Regular.ttf) format('truetype');
 }
 body {
     font-family: 'SFUFuturaRegular',sans-serif;
@@ -49,7 +43,7 @@ h6 {
     font-weight: 700;
 }
 a {
-    font-family: "AvenirNextLTPro-Regular",sans-serif;
+    font-family: "SFUFuturaRegular",sans-serif;
     text-decoration: none;
     transition:0.5s all ease;
     -webkit-transition:0.5s all ease;
@@ -151,7 +145,7 @@ fieldset {
 	position:relative;
 }
 .section-title h3 {
-    font-family: "AvenirNextLTPro-Regular",sans-serif;
+    font-family: "SFUFuturaRegular",sans-serif;
     font-weight: 100;
     color: #333;
     margin: 0;
@@ -173,7 +167,7 @@ fieldset {
     position:relative; 
 }
 .section-title-purple {
-    font-family: "AvenirNextLTPro-Regular",sans-serif;
+    font-family: "SFUFuturaRegular",sans-serif;
     color: #3c2566!important;
     position:relative; 
 }
@@ -629,7 +623,7 @@ height:700px;
     color: #3c2566;
 }*/
 .service p {
-    font-family: "AvenirNextLTPro-Regular",sans-serif;
+    font-family: "SFUFuturaRegular",sans-serif;
     text-align: justify;
     color: #737373;
     line-height: 21px;
@@ -936,7 +930,7 @@ padding: 11px 0;
     -webkit-border-top-right-radius: 0.7em;
 }
 .sale-box span.on_sale{
-    font-family: "AvenirNextLTPro-Regular", sans-serif;
+    font-family: "SFUFuturaRegular", sans-serif;
     font-size: 14px;
     font-weight: 600;
     color: #3c2566;
@@ -973,7 +967,7 @@ padding: 11px 0;
     font-weight: 400;
 }
 .pricing-grid1 ul li.whyt a{
-    font-family: "AvenirNextLTPro-Regular", sans-serif;
+    font-family: "SFUFuturaRegular", sans-serif;
     background:#f4f4f4;
 }
 .pricing-grid1:hover div.price-bg ul li a,.pricing-grid1:hover div.price-value h3 a{
@@ -1107,6 +1101,10 @@ padding: 11px 0;
 /*END PRICING*/
 
 /*START SIGN UP*/
+.contact-form {
+    padding: 0px !important;
+}
+
 .signup {
     background-image: url("../img/bg-signup.png");
     background-repeat: no-repeat;
@@ -1121,7 +1119,7 @@ padding: 11px 0;
     background-color: rgba(60, 37, 102, 0.75);
 }
 .section-title-white {
-    font-family: "AvenirNextLTPro-Regular",sans-serif;
+    font-family: "SFUFuturaRegular",sans-serif;
     color: #fff!important;
     position:relative; 
 }

@@ -27,32 +27,22 @@ app.get('/vn', function(req, res) {
         res.render('index-vi.ejs');
 }); 
 app.post('/', parser, function(req, res) {
-        verifyRecaptcha(req.body["recaptcha"], function(success) {
-                if (success) {
-                        var smtpTransport = nodemailer.createTransport({
+    verifyRecaptcha(req.body["recaptcha"], function(success) {
+            if (success) {
+                var smtpTransport = nodemailer.createTransport({
                     service: "gmail",
-                    // auth: {
-                    //   xoauth2: xoauth2.createXOAuth2Generator({
-                    //     user: "taikhoancuatoi2009@gmail.com",
-                    //     clientId: "842565488955-duuu4vekbkn75len2m4p3k1aormlscue.apps.googleusercontent.com",
-                    //     clientSecret: "t8a1KRuoS8_6azqi4Ay_ZFsD",
-                    //     refreshToken: "1/YRsa2PL4CUcFADrgh8JZYvxIIjqlKCprEA0J2o1QCu5SW833OPj3ibqWSNvPtM8a",
-                    //     accessToken: 'ya29.Ci-SA0MWpR--pasA4pXPQ8bkz565-tIR6newuXgEY5kEdTh8Nn6YG9E8yjpUAFR4Zw'
-                    //   })
-                    // }
                     auth: {
-                      xoauth2: xoauth2.createXOAuth2Generator({
-                        user: "founders@gcall.vn",
-                        clientId: "766030163260-88s0l071rr5vd8qftk8sp7qa1cvg8ihd.apps.googleusercontent.com",
-                        clientSecret: "AMQFgdkbW4gfK1LWpVHo6MK0",
-                        refreshToken: "1/A-7rwkSkLliAQuPwtdOCbtwCjgJpYM2Ymt3iZ-D_zAo",
-                        accessToken: 'ya29.Ci--A_8SQb1i5AGJPDKztK-FTyFIWVzzdOaszUHHJqFmXrBsUwgdk4FwKjrGQuiODw'
-                      })
-                    }
-                  });
-                  var mailOptions = {
+                        xoauth2: xoauth2.createXOAuth2Generator({
+                            user: "founders@gcall.vn",
+                            clientId: "507886651960-b386d3g36eolbs124dlbl701rvq4s7d5.apps.googleusercontent.com",
+                            clientSecret: "XN5n2gvq9PXAzQ3APoSHGZgf",
+                            refreshToken: "1/1YtOXgsGOhsunT8wTDg1mVAVYhgLq-BOciT7wCr8f34",
+                        })
+                    } 
+                });
+                var mailOptions = {
                     from: "GCalls Company <founders@gcall.vn>",
-                    to: req.body.email,
+                    to: req.body.email, 
                     subject: '[Gcalls <> ' + req.body.company + '] Pre-work before Using Service',
                     generateTextFromHTML: true,
                     html: 
@@ -115,26 +105,73 @@ app.post('/', parser, function(req, res) {
                         filename: 'UpgradedPlan_BusinessProposal.pdf',
                         path: __dirname + '/public/UpgradedPlan_BusinessProposal.pdf',
                         contentType: 'application/pdf'
-                        }] 
-                  };
-                  smtpTransport.sendMail(mailOptions, function(error, response) {
+                    }] 
+                };
+                smtpTransport.sendMail(mailOptions, function(error, response) {
                     if (error) {
-                      console.log("mail error", error);
+                        console.log("mail error", error);
                     } else {
-                      console.log(response);
+                        console.log(response);
                     }
-                    smtpTransport.close();
-                  });
-                        res.end(JSON.stringify({ registeredSuccessfully: true }));
-                } else {
-                        res.end(JSON.stringify({ registeredSuccessfully: false, reason: "Please check captcha here!!!" }));
+                smtpTransport.close();
+                });
+                
+                var transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        xoauth2: xoauth2.createXOAuth2Generator({
+                            user: "founders@gcall.vn",
+                            clientId: "507886651960-b386d3g36eolbs124dlbl701rvq4s7d5.apps.googleusercontent.com",
+                            clientSecret: "XN5n2gvq9PXAzQ3APoSHGZgf",
+                            refreshToken: "1/1YtOXgsGOhsunT8wTDg1mVAVYhgLq-BOciT7wCr8f34",
+                        })
+                    }
+                });
+
+                // setup email data with unicode symbols
+                var mailOption = {
+                    from: 'GCalls Company <founders@gcall.vn>', 
+                    to: 'hr@gcall.vn, minh.thai@gcalls.co', 
+                    subject: 'Khách hàng đăng kí trên website', 
+                    generateTextFromHTML: true,
+                    html:
+                        // 'Tên khách hàng:<b>' + req.body.name + '</b><br>' + 
+                        // 'Email:<b>' + req.body.email + '</b><br>' +  
+                        // 'Số điện thoại:<b>' + req.body.phone + '</b><br>' +  
+                        // 'Company:<b>' + req.body.company + '</b><br>' 
+                        '<table style="width:100%;border: 1px solid black;border-collapse: collapse;">' + 
+                          '<tr>' +
+                            '<th style="padding: 5px;border: 1px solid black;border-collapse: collapse;text-align: left;">Tên khách hàng</th>' +
+                            '<th style="padding: 5px;border: 1px solid black;border-collapse: collapse;text-align: left;">Email</th>' +
+                            '<th style="padding: 5px;border: 1px solid black;border-collapse: collapse;text-align: left;">Số điện thoại</th>' +
+                            '<th style="padding: 5px;border: 1px solid black;border-collapse: collapse;text-align: left;">Company</th>' +
+                          '</tr>' +
+                          '<tr>' +
+                            '<td style="padding: 5px;border: 1px solid black;border-collapse: collapse;">'+req.body.name+'</td>' +
+                            '<td style="padding: 5px;border: 1px solid black;border-collapse: collapse;">'+req.body.email+'</td>' +
+                            '<td style="padding: 5px;border: 1px solid black;border-collapse: collapse;">'+req.body.phone+'</td>' +
+                            '<td style="padding: 5px;border: 1px solid black;border-collapse: collapse;">'+req.body.company+'</td>' +
+                          '</tr>' +
+                        '</table>' 
                 }
-        });
+
+                // send mail with defined transport object
+                transporter.sendMail(mailOption, function(error, info) {
+                    if (error) {
+                        return console.log(error);
+                    }
+                    console.log('Message %s sent: %s', info.messageId, info.response);
+                });                 
+                    res.end(JSON.stringify({ registeredSuccessfully: true }));
+            } else {
+                    res.end(JSON.stringify({ registeredSuccessfully: false, reason: "Please check captcha here!!!" }));
+            }
+    });
 });
  
 app.listen(9000);
  
-var SECRET = "6Lcfvg8UAAAAAGzJqOFKDHg21BWYfnluFfzWVpBb";
+var SECRET = "6LfExAsUAAAAAMsjxTJ8IxiJQekspWNJsqMz1SRY";
  
 function verifyRecaptcha(key, callback) {
         https.get("https://www.google.com/recaptcha/api/siteverify?secret=" + SECRET + "&response=" + key, function(res) {
