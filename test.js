@@ -131,14 +131,11 @@ app.post('/', parser, function(req, res) {
                 // setup email data with unicode symbols
                 var mailOption = {
                     from: 'GCalls Company <founders@gcall.vn>', 
-                    to: 'hr@gcall.vn, minh.thai@gcalls.co', 
+                    to: 'sale@gcalls.co, minh.thai@gcalls.co', 
+                    // to: 'thien.dang@gcall.vn', 
                     subject: 'Khách hàng đăng kí trên website', 
                     generateTextFromHTML: true,
                     html:
-                        // 'Tên khách hàng:<b>' + req.body.name + '</b><br>' + 
-                        // 'Email:<b>' + req.body.email + '</b><br>' +  
-                        // 'Số điện thoại:<b>' + req.body.phone + '</b><br>' +  
-                        // 'Company:<b>' + req.body.company + '</b><br>' 
                         '<table style="width:100%;border: 1px solid black;border-collapse: collapse;">' + 
                           '<tr>' +
                             '<th style="padding: 5px;border: 1px solid black;border-collapse: collapse;text-align: left;">Tên khách hàng</th>' +
@@ -155,12 +152,13 @@ app.post('/', parser, function(req, res) {
                         '</table>' 
                 }
 
-                // send mail with defined transport object
                 transporter.sendMail(mailOption, function(error, info) {
                     if (error) {
                         return console.log(error);
-                    }
-                    console.log('Message %s sent: %s', info.messageId, info.response);
+                    } else {
+                         console.log('Message %s sent: %s', info.messageId, info.response);
+                        }
+                    transporter.close();
                 });                 
                     res.end(JSON.stringify({ registeredSuccessfully: true }));
             } else {
