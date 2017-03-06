@@ -3,7 +3,7 @@
 * 01.GENERAL STYLE
 * ----------------------------------------------------------------------------------------
 */
-
+ 
 
 @font-face {
    font-family: SFUFuturaBold;
@@ -722,13 +722,13 @@ height: 150px;
 
 /*START ABOUT US*/
 .about-us {
-    background-image: url("../img/ABOUT_US.png");
+    /* background-image: url("../img/ABOUT_US.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover; */
     /*background-color: #fff*/
 }
 .section-titles {
@@ -1019,7 +1019,7 @@ padding: 11px 0;
     padding: 2em 0 1em 0;
     }
     .price-value h2 a, .price-value.two h3 a, .price-value.three h4 a {
-    font-size: 1.6em;
+    font-size: 0.8em;
     }
     .price-head h1 {
     margin-top: 1em;
@@ -1087,7 +1087,7 @@ padding: 11px 0;
     margin-right: 0;
     }
     .price-value h2 a, .price-value.two h3 a, .price-value.three h4 a {
-    font-size: 1.2em;
+    font-size: 0.8em;
     }
     .price-value h5 span,.price-value lable {
     font-size: 16px;
@@ -1308,9 +1308,6 @@ input[type=text]:focus {
     .service p { 
         margin-bottom: 50px;
     }
-    /*.single_testimonial {
-
-    }*/
     .customer_youtube {
         width: 75%;
         height: 75%;
@@ -1322,8 +1319,24 @@ input[type=text]:focus {
     .customer_review {
         display: none;
     }
+    .section-titles p {
+        margin: 0px;
+    }
+    .section-titles h3 {
+        margin: 0px;
+    }
+    .section-titles h4 {
+        margin: 0px;
+    }
+
 }
 @media only screen and (max-width:768px) { 
+    .service h4 {
+        font-size: 10px;
+    }
+    .service h5 {
+        font-size: 8px;
+    }
     .section-title h2 { 
         text-align: center 
     }
@@ -1349,16 +1362,31 @@ input[type=text]:focus {
     .home_text p { 
         width: 100% 
     }
+    .feature_gcall ul {
+        margin: 0;
+    }
+    .feature_gcall h3 {
+        margin-left: 50px;
+        font-size: 14px;
+        padding: 5px 0;
+        border: 2px solid #fff;
+    }
+    .section-titles {
+        margin-bottom: 0;
+    }
 }
 @media only screen and (max-width:991px) {
-    .feature_gcall img {
-        margin-left: 90px;
+    /* .service h4 {
+        font-size: 10px !important;
     }
+    .service h5 {
+        font-size: 8px !important;
+    } */
     .bg_whygcall img {
         height: 80%;
     }
-    .service p{ 
-        margin-bottom: 20px;
+    .service p { 
+        margin-bottom: 20px !important;
     }
     .menu-top {
         margin-left: 0px;
@@ -1366,11 +1394,32 @@ input[type=text]:focus {
     .navbar-default .navbar-nav > li > a {
         padding: 10px;
     }
-}
-@media only screen and (max-width:1199) {
-    .service img{
+    .navbar-brand img {
+        margin-left: 0px;
+    }
+    .bg_whygcall img {
         display: none;
-    } 
+    }
+    .feature_gcall img {
+        display: none;
+    }
+    .feature_gcall ul{
+        margin: 0;
+    }
+    .feature_gcall h3 {
+        margin-left: 50px;
+        font-size: 14px;
+        padding: 5px 0;
+        border: 2px solid #fff;
+    }
+}
+@media only screen and (max-width:1199px) {
+    .service h4 {
+        font-size: 14px;
+    }
+    .service h5 {
+        font-size: 10px;
+    }
     .service p{ 
         margin-bottom: 50px;
     }
