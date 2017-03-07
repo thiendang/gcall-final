@@ -141,6 +141,24 @@ $(document).ready(function() {
 	});
 
 
-  
+
+//	============================= Accordion  =============================
+
+    var hideAccordion = $(".accordion > .accordion-content").hide(),
+		accordionLink = $(".accordion > .accordion-title > a");
+    
+    hideAccordion.first().slideDown();
+    accordionLink.first().addClass("active");
+	
+	accordionLink.on("click", function (e) {
+		
+        var accordionContent = $(this).parent().next(".accordion-content");
+        accordionLink.removeClass("active");
+        $(this).addClass("active");
+        hideAccordion.not(accordionContent).slideUp();
+        $(this).parent().next().slideDown();
+        e.preventDefault();
+		
+	});
 
 
