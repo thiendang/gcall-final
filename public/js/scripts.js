@@ -12,7 +12,7 @@
 		/*END PRELOADER JS*/
 
 		/*START MENU JS*/
-			$('a.page-scroll, .page-scroll, .popup-with-zoom-anim, .navbar-brand, a.btn-try').on('click', function(e){
+			$('a.page-scroll, .page-scroll, .popup-with-zoom-anim, .navbar-brand, a.btn-try, a.btn-lg').on('click', function(e){
 				var anchor = $(this);
 				$('html, body').stop().animate({
 					scrollTop: $(anchor.attr('href')).offset().top - 50
@@ -118,9 +118,9 @@
 })(jQuery);
 
 $(document).ready(function() {
-	$('.button-youtube').magnificPopup({
+	$('#video-item').magnificPopup({
 			  items: {
-				     src: 'https://www.youtube.com/watch?v=_a3Ye1UW6No'
+				     src: 'https://www.youtube.com/watch?v=w0DShKQm1Ks'
 			     },
 			  type: 'iframe',
 			  iframe: {
