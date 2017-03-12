@@ -744,6 +744,10 @@ height:700px;
 /*END WHYGCALL*/
 
 /*START PRICING*/
+#price {
+    background: #f4f4f4;
+}
+
 #price .btn {
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -984,7 +988,7 @@ height:700px;
     padding: 0 .5em;
     line-height: 1.5em;
     font-weight: 900;
-    background-color: #fff;
+    background-color: #f4f4f4;
 }
 .price-footer {
     text-align: center;
