@@ -12,7 +12,7 @@
 		/*END PRELOADER JS*/
 
 		/*START MENU JS*/
-			$('a.page-scroll, .page-scroll, .popup-with-zoom-anim, .navbar-brand, a.btn-try, a.btn-lg').on('click', function(e){
+			$('a.page-scroll, .page-scroll, .popup-with-zoom-anim, .navbar-brand, a.btn-try, a.btn-lgs, a.btn-primary').on('click', function(e){
 				var anchor = $(this);
 				$('html, body').stop().animate({
 					scrollTop: $(anchor.attr('href')).offset().top - 50

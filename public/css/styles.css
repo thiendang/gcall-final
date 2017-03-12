@@ -70,6 +70,17 @@ fieldset {
     margin: 0 auto;
     padding: 0;
 }
+
+@-moz-document url-prefix() {
+    .bg_whygcall {
+        bottom: -365px;
+        -moz-bottom:-365px; 
+        width: 380px;
+        position: absolute;
+        height: 440px;
+    }
+}
+
 /*START PRELOADER DESIGN*/
 .preloader {
     background: #fff;
