@@ -4,7 +4,7 @@
 * ----------------------------------------------------------------------------------------
 */
 
- 
+  
 @font-face {
    font-family: SFUFuturaBold;
    src: url('../fonts/SFUFuturaBold.eot');
@@ -2012,6 +2012,10 @@ input[type=text]:focus {
 
 /*================ RESPONSIVE ================*/
 
+@media only screen and (max-width: 320px) {
+
+}
+
 @media only screen and (max-width:360px) { 
     .section-title h2 { 
         font-size: 24px 
@@ -2023,10 +2027,54 @@ input[type=text]:focus {
     .single-slide-item h2 {
         font-size: 20px !important;
     }
-    /*.service img{
-        display: none;
-    } */
+    #price .pricing-item {
+        width: 90%;
+    }
+    .hr-text:before {
+        content: '';
+        background: -webkit-linear-gradient(left, transparent, #000, transparent);
+        background: linear-gradient(to right, transparent, #683cba, transparent);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 8px;
+    }
+    .hr-text:after {
+        font-size: 20px;
+    }
+    #price .btn-lg {
+        padding: 8px 38px;
+    }
+    .pricing-title {
+        margin: 13px 0px 0px;
+    }
+    .pricing-item h3 {
+        margin-top: 0px;
+        padding-top: 5px;
+        font-size: 12px;
+        letter-spacing: 2px !important;
+    }
+    .pricing-item h4 {
+        font-size: 15.6px !important;
+    }
+    .pricing-item h1 {
+        font-size: 57px;
+    }
+    .pricing-body {
+        padding-bottom: 10px;
+    }
+    #pricing-detail .table1 .btn-primary {
+        padding: 7px 10px 7px 10px;
+    }
+    #pricing-detail .table1 td.col3 .btn-primary {
+        padding: 7px 10px 7px 10px;
+    }
+    #price .btn-lg {
+        padding: 8px 34px;
+    }
 }
+
 @media only screen and (max-width:480px) { 
     .section-title h2 { 
         font-size: 30px 
@@ -2047,17 +2095,6 @@ input[type=text]:focus {
     .service p { 
         margin-bottom: 50px;
     }
-    .customer_youtube {
-        width: 75%;
-        height: 75%;
-    }
-    .customer_youtube a img {
-        width: 100%;
-        height: 100%;
-    }
-    .customer_review {
-        display: none;
-    }
     .section-titles p {
         margin: 0px;
     }
@@ -2067,10 +2104,18 @@ input[type=text]:focus {
     .section-titles h4 {
         margin: 0px;
     }
-    #price .pricing-item {
-        width: 80%;
-    }   
-
+    .pricing-item h3 { 
+        font-size: 17px;
+    }
+    .pricing-item h4 {
+        font-size: 21.6px;
+    }
+    .pricing-body {
+        padding-bottom: 7px;
+    }
+    .pricing-item .pricing-body .pricing-title h2 {
+        font-size: 20px;
+    }
 }
 @media only screen and (max-width:768px) { 
     .service h4 {
