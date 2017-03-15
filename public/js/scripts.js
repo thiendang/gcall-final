@@ -143,7 +143,7 @@ $(document).ready(function() {
 	setTimeout(function(){        
         // $('#preloader').fadeOut();
         $('.preloader').delay(150).fadeOut('slow'); 
-    }, 500);
+    }, 300);
 
 //	============================= Accordion  =============================
 
