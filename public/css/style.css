@@ -4,7 +4,7 @@
 * ----------------------------------------------------------------------------------------
 */
 
-  
+   
 @font-face {
    font-family: SFUFuturaBold;
    src: url('../fonts/SFUFuturaBold.eot');
@@ -2073,6 +2073,15 @@ input[type=text]:focus {
     #price .btn-lg {
         padding: 8px 34px;
     }
+    /* .g-recaptcha {
+        overflow: hidden;   
+    } */
+    #rc-imageselect, .g-recaptcha {
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
 }
 
 @media only screen and (max-width:480px) { 
@@ -2163,9 +2172,6 @@ input[type=text]:focus {
     }
 }
 @media only screen and (max-width:991px) {
-    .bg_whygcall img {
-        height: 80%;
-    }
     .service p { 
         margin-bottom: 20px !important;
     }
@@ -2178,7 +2184,7 @@ input[type=text]:focus {
     .navbar-brand img {
         margin-left: 0px;
     }
-    .bg_whygcall img {
+    .background {
         display: none;
     }
     .feature_gcall img {
