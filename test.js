@@ -46,7 +46,7 @@ app.post('/', parser, function(req, res) {
                     subject: '[Gcalls <> ' + req.body.company + '] Pre-work before Using Service',
                     generateTextFromHTML: true,
                     html: 
-                        'Chào Mr/Ms. <b style="text-transform:capitalize;">' + req.body.name + '</b>,' + '<br>' + '<br>' +
+                        'Chào Anh/Chị. <b style="text-transform:capitalize;">' + req.body.name + '</b>,' + '<br>' + '<br>' +
                         'Cảm ơn quý khách đã dành sự quan tâm đến sản phẩm của Gcalls. Trong thời gian chờ đợi chúng tôi cung cấp tài khoản demo account, quý khách có thể xem video hướng dẫn sử dụng sản phẩm:' + 
                         '<a href="https://www.youtube.com/watch?v=w0DShKQm1Ks">https://www.youtube.com/watch?v=w0DShKQm1Ks</a>' + '<br>' + '<br>' +
                         'Chúng tôi cũng đã đính kèm thông tin chi tiết về sản phẩm để tham khảo thêm nếu cần thiết.'  + '<br>' + '<br>' +
@@ -104,14 +104,14 @@ app.post('/', parser, function(req, res) {
                         '</table>' 
                 }
 
-                // transporter.sendMail(mailOption, function(error, info) {
-                //     if (error) {
-                //         return console.log(error);
-                //     } else {
-                //          console.log('Message %s sent: %s', info.messageId, info.response);
-                //         }
-                //     transporter.close();
-                // });                 
+                transporter.sendMail(mailOption, function(error, info) {
+                    if (error) {
+                        return console.log(error);
+                    } else {
+                         console.log('Message %s sent: %s', info.messageId, info.response);
+                        }
+                    transporter.close();
+                });                 
                     res.end(JSON.stringify({ registeredSuccessfully: true }));
             } else {
                     res.end(JSON.stringify({ registeredSuccessfully: false, reason: "Please check captcha here!!!" }));
