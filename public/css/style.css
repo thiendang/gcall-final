@@ -1361,6 +1361,18 @@ height:700px;
     #pricing-detail .table1 .col3.popular .heading-block .heading {
         padding: 26px 0 14px;
     }
+    #pricing-detail .table1 .col2 h3 {
+        font-size: 14px;
+    }
+    #pricing-detail .table1 .col3 h3 {
+        font-size: 14px;
+    }
+    #pricing-detail .table1 .col4 h3 {
+        font-size: 14px;
+    }
+    #pricing-detail .table1 .col5 h3 {
+        font-size: 14px;
+    }
 }
 
 #pricing-detail .table1 .col4 {
@@ -1442,9 +1454,6 @@ height:700px;
     #pricing-detail .table1 td>div {
         width: 61%;
         padding: 0 10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         display: inline-block;
         vertical-align: middle;
     }
@@ -1483,10 +1492,28 @@ height:700px;
 
 @media only screen and (max-width:767px) {
     #pricing-detail .table1 td.col1 {
-        border-width: 1px 1px 0;
+      border-top: 1px solid #e3e3e3 !important;
+      border-bottom: 1px solid #e3e3e3 !important;
+      border-width: 1px 1px 0;
     }
     #pricing-detail .table1 td.col1>div {
         padding: 0 10px;
+    }
+    #pricing-detail .table1 td.col2 {
+      border-top: 1px solid #e3e3e3 !important;
+      border-bottom: 1px solid #e3e3e3 !important;
+    }
+    #pricing-detail .table1 td.col3 {
+      border-top: 1px solid #e3e3e3 !important;
+      border-bottom: 1px solid #e3e3e3 !important;
+    }
+    #pricing-detail .table1 td.col4 {
+      border-top: 1px solid #e3e3e3 !important;
+      border-bottom: 1px solid #e3e3e3 !important;
+    }
+    #pricing-detail .table1 td.col5 {
+      border-top: 1px solid #e3e3e3 !important;
+      border-bottom: 1px solid #e3e3e3 !important;
     }
 }
 
@@ -1518,7 +1545,7 @@ height:700px;
         margin: 0;
         font-size: 12px;
         min-width: inherit;
-        padding: 10px 40px 10px 10px;
+        padding: 10px 10px 10px 10px;
     }
 }
 
@@ -1741,7 +1768,7 @@ height:700px;
         margin: 0;
         font-size: 12px;
         min-width: inherit;
-        padding: 10px 40px 10px 10px
+        padding: 10px 10px 10px 10px
     }
 }
 
