@@ -5,28 +5,31 @@
 */
 @font-face {
    font-family: SFUFuturaBold;
-   src: url(../fonts/SFUFuturaBold.TTF) format('truetype');
+   src: url('../fonts/SFUFuturaBold.eot');
+    src: url('../fonts/SFUFuturaBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFUFuturaBold.woff2') format('woff2'),
+        url('../fonts/SFUFuturaBold.woff') format('woff'),
+        url('../fonts/SFUFuturaBold.ttf') format('truetype'),
+        url('../fonts/SFUFuturaBold.svg#SFUFuturaBold') format('svg');
    font-weight: bold;
-}
+} 
 @font-face {
    font-family: SFUFuturaHeavy;
-   src: url(../fonts/SFUFuturaHeavy.TTF) format('truetype');
+   src: url('../fonts/SFUFuturaHeavy.eot');
+    src: url('../fonts/SFUFuturaHeavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFUFuturaHeavy.woff2') format('woff2'),
+        url('../fonts/SFUFuturaHeavy.woff') format('woff'),
+        url('../fonts/SFUFuturaHeavy.ttf') format('truetype'),
+        url('../fonts/SFUFuturaHeavy.svg#SFUFuturaHeavy') format('svg');
 }
 @font-face {
    font-family: SFUFuturaRegular;
-   src: url(../fonts/SFUFuturaRegular.TTF) format('truetype');
-}
-@font-face {
-   font-family: SFUFuturaRegular;
-   src: url(../fonts/SFUFuturaRegular.TTF) format('truetype');
-}
-body {
-    font-family: 'SFUFuturaRegular',sans-serif;
-    font-size: 14px;
-    color: #93989B;
-    overflow-x: hidden;
-    margin: auto;
-    background: #fff;
+   src: url('../fonts/SFUFutura.eot');
+    src: url('../fonts/SFUFutura.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFUFutura.woff2') format('woff2'),
+        url('../fonts/SFUFutura.woff') format('woff'),
+        url('../fonts/SFUFutura.ttf') format('truetype'),
+        url('../fonts/SFUFutura.svg#SFUFutura') format('svg');
 }
 html,
 body { height: 100% }

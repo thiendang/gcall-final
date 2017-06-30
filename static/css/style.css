@@ -14,7 +14,7 @@
         url('../fonts/SFUFuturaBold.ttf') format('truetype'),
         url('../fonts/SFUFuturaBold.svg#SFUFuturaBold') format('svg');
    font-weight: bold;
-}
+} 
 @font-face {
    font-family: SFUFuturaHeavy;
    src: url('../fonts/SFUFuturaHeavy.eot');

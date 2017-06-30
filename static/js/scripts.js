@@ -142,8 +142,8 @@ $(document).ready(function() {
 
 	setTimeout(function(){        
         // $('#preloader').fadeOut();
-        $('.preloader').delay(150).fadeOut('slow'); 
-    }, 400);
+        $('.preloader').delay(150).fadeOut('fast'); 
+    }, 1000);
 
 //	============================= Accordion  =============================
 
