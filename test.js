@@ -11,7 +11,7 @@ var app = express();
 var https = require('https');
 var parser = bodyParser.urlencoded({extended: false});
 app.use(bodyParser.json());
-// app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static('public'));
 app.use(logger("dev"));
 app.set('view engine','ejs');
 app.set('views', './views');
@@ -55,7 +55,7 @@ app.post('/', parser, function(req, res) {
                       ,
                     attachments: [{
                         filename: 'UpgradedPlan_BusinessProposal.pdf',
-                        path: __dirname + '/static/Gcalls-Brochure.pdf',
+                        path: __dirname + '/public/Gcalls-Brochure.pdf',
                         contentType: 'application/pdf'
                     }]
                 };
