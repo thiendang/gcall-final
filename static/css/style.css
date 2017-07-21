@@ -14,7 +14,7 @@
         url('../fonts/SFUFuturaBold.ttf') format('truetype'),
         url('../fonts/SFUFuturaBold.svg#SFUFuturaBold') format('svg');
    font-weight: bold;
-} 
+}
 @font-face {
    font-family: SFUFuturaHeavy;
    src: url('../fonts/SFUFuturaHeavy.eot');
@@ -44,7 +44,7 @@ body {
 html,
 body { height: 100% }
 h1,
-h2, 
+h2,
 h3,
 h4,
 h5,
@@ -288,7 +288,7 @@ fieldset {
 */
 .welcome-area,
 .welcome-slider-area,
-.welcome-slider-area div { height: 617px }
+.welcome-slider-area div { height: 100% }
 .welcome-slider-area div.single-slide-item-tablecell,
 .welcome-slider-area div.single-slide-item-tablecell div { height: auto }
 .single-slide-item-table {
@@ -319,6 +319,7 @@ fieldset {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+    height: 100%;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
