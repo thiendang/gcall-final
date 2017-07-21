@@ -52,7 +52,7 @@ app.post('/', parser, function(req, res) {
                         'Chúng tôi cũng đã đính kèm thông tin chi tiết về sản phẩm để quý khách tham khảo thêm nếu cần thiết.'  + '<br>' + '<br>' +
                         'Cảm ơn quý khách,' + '<br>' +
                         'GCALLS VIETNAM PTE LTD'
-                        '<img src='/public/signature.png'/>'
+                        `<img src='/public/signature.png'/>`
                       ,
                     attachments: [{
                         filename: 'UpgradedPlan_BusinessProposal.pdf',
