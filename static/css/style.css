@@ -1562,12 +1562,12 @@ height:700px;
     }
 }
 
-#pricing-detail .table1 td.col4 {
+/*#pricing-detail .table1 td.col4 {
     width: 20%;
-}
+}*/
 
 #pricing-detail .table1 td.col5 {
-    width: 20%;
+    width: 25%;
 }
 
 @media only screen and (max-width:767px) {
