@@ -11,7 +11,7 @@ var app = express();
 var https = require('https');
 var parser = bodyParser.urlencoded({extended: false});
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('static'));
 app.use(logger("dev"));
 app.set('view engine','ejs');
 app.set('views', './views');
